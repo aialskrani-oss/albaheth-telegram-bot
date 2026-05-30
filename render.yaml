@@ -19,4 +19,4 @@ services:
       - key: BOT_NAME
         value: بوت البحث الأكاديمي العراقي
       - key: PORT
-        value: "8080"
+        value: "10000"
