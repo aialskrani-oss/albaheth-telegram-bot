@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: albaheth-telegram-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: AI_API_KEYS
+        sync: false
+      - key: AI_BASE_URL
+        value: https://generativelanguage.googleapis.com/v1beta/openai/
+      - key: AI_MODEL
+        value: gemini-2.5-flash
+      - key: FORCE_SUB_CHANNEL
+        value: ""
+      - key: BOT_NAME
+        value: بوت البحث الأكاديمي العراقي
+      - key: PORT
+        value: "8080"
